@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "FASTER CAREER GROWTH",
+        "price": "500",
+        "description": "Working hard, have talent and skills but slower Career growth ? Then I can guide you to grow your career faster.",
+        "img": "https://cdn.pixabay.com/photo/2018/05/09/22/40/career-3386334_960_720.jpg"
+    },
+    {
+        "id": 2,
+        "name": "MAINTAIN BALANCED LIFE",
+        "price": "800",
+        "description": "Are you in a dilemma whether you prioritize your profession or family? My guidelines and coaching may help you to maintain a balanced life between these two.",
+        "img": "https://cdn.pixabay.com/photo/2020/06/23/20/31/work-life-balance-5333799_960_720.jpg"
+    },
+    {
+        "id": 3,
+        "name": "HANDLE WORK LOAD",
+        "price": "750",
+        "description": "Do you feel your work load nothing but a huge rock hill and struggling to finish timely? Then this course might be your ultimate choice .",
+        "img": "https://cdn.pixabay.com/photo/2019/07/11/08/15/workload-4330273_960_720.jpg"
+    },
+    {
+        "id": 4,
+        "name": "BEHAVIOR CONTROL ",
+        "price": "680",
+        "description": "Subconsciously do you make unexpected behavior with your colleagues or family ? You understand this is not good but has no control ? Then this course is for you .",
+        "img": "https://cdn.pixabay.com/photo/2021/02/12/18/32/manager-6009311_960_720.jpg"
+    },
+    {
+        "id": 5,
+        "name": "DEVELOP PUBLIC CONNECTION",
+        "price": "530",
+        "description": "Links and connection with potential people certainly make our lives rich, meaningful and efficient. If you are introvert and looking forward to building strong connection with potential people, then this is your suitable course.",
+        "img": "https://cdn.pixabay.com/photo/2021/11/15/04/49/handshake-6796386_960_720.jpg"
+    },
+    {
+        "id": 6,
+        "name": "COSTS AND SAVINGS",
+        "price": "620",
+        "description": "Earning is meaningless unless you make savings. If you are trying but seems very hard to make saving alongside maintaining family and socialities, then this course will gives a practical and effective guidelines that will certainly help you to make savings. ",
+        "img": "https://cdn.pixabay.com/photo/2021/04/09/09/39/money-6163908_960_720.png"
+    }
+]
