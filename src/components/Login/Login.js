@@ -1,7 +1,9 @@
+import { async } from '@firebase/util';
 import React, { useRef } from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+
 import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../firebase.init';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
@@ -48,7 +50,7 @@ const Login = () => {
             toast('Sent email for password reset');
         }
 
-    }
+    };
     return (
         <>
             <Container className='my-5'>
