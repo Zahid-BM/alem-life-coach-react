@@ -4,8 +4,6 @@ This website for Assignment-10 [Live Site Link is here](https://alem-life-coach.
 
 ## Below are the key notes of the website
 
-* Used react router, react bootstrap router, react toasty, react bootstrap and firebase for hosting & authentication. 
-
 * Login and register toggle page.
   
 * Two social media website authentication implemented alongside email and password authentication.
@@ -27,3 +25,14 @@ This website for Assignment-10 [Live Site Link is here](https://alem-life-coach.
 * Full website is responsive for mobile phone
 
 * With one email user can create multiple accounts
+
+
+## Below are the list of technologies (frameworks, libraries) used in this project
+
+* react router, 
+* react bootstrap router, 
+* react toasty, 
+* react bootstrap,
+* and firebase for hosting & authentication.
+
+
