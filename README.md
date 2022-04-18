@@ -1,8 +1,8 @@
-# Getting Started with Create React App
+# ALEM Life Coach
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This website for Assignment-10 [Live Site Link is here](https://alem-life-coach.web.app/).
 
-## Available Scripts
+## Below are the key notes of the website
 
 In the project directory, you can run:
 

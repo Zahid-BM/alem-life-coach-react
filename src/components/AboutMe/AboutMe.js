@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import image from '../../images/Passport size below 200kb.jpeg'
 
 const AboutMe = () => {
     return (
@@ -19,7 +20,7 @@ const AboutMe = () => {
                         <p className='text-secondary'>Currently I am having my programming course from Programming Hero on Full Stack Web Development. After having completed this course I will try for job and later on after having some experiences and enriching my programming skills I have a plan to start a business of my own.</p>
                     </Col>
                     <Col lg={6}>
-                        <img className='w-100 rounded' src="https://i.ibb.co/yfRsrzz/Passport-size-new.jpg" alt="" />
+                        <img className='w-100 rounded' src={image} alt="" />
                     </Col>
                 </Row>
             </Container>
