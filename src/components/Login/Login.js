@@ -10,6 +10,10 @@ import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 const Login = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || "/";
 
     const [
         signInWithEmailAndPassword,
@@ -20,9 +24,6 @@ const Login = () => {
 
     const [sendPasswordResetEmail, sending, resetPassError] = useSendPasswordResetEmail(auth);
 
-    const navigate = useNavigate();
-    const location = useLocation();
-    const from = location.state?.from?.pathname || "/";
 
     if (user) {
         navigate(from, { replace: true });
@@ -32,8 +33,6 @@ const Login = () => {
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         signInWithEmailAndPassword(email, password)
-        toast('login success');
-        console.log(email, password);
     };
     const handleResetPass = async () => {
         const email = emailRef.current.value;
@@ -76,7 +75,7 @@ const Login = () => {
                                 Login
                             </Button>
                         </Form>
-                        <p className='my-4'>New to Car Genius ? <Link to='/signup' className='text-warning text-decoration-none'>Signup</Link></p>
+                        <p className='my-4'>New to Alem Life Coach ? <Link to='/register' className='text-warning text-decoration-none'>Register Now</Link></p>
                         <SocialLogin></SocialLogin>
                         <ToastContainer></ToastContainer>
                     </Col>
