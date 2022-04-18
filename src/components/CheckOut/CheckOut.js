@@ -13,7 +13,7 @@ const CheckOut = () => {
     return (
         <div>
             <Container className='my-5'>
-                <h2 className='text-center text-secondary display-1 pb-4'>This is Protected Checkout Route</h2>
+                <h2 className='text-center text-secondary  display-3 pb-4'>This is Protected Checkout Route</h2>
                 <Row>
                     <Col lg={8}>
                         <img className='w-100 h-100 rounded-3' src="https://cdn.pixabay.com/photo/2019/08/22/20/19/shopping-4424344_960_720.jpg" alt="" />
@@ -56,7 +56,7 @@ const CheckOut = () => {
                         </Form>
                     </Col>
 
-               </Row>
+                </Row>
                 <ToastContainer></ToastContainer>
             </Container>
         </div>
