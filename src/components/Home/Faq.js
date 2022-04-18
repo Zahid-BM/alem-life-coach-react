@@ -8,7 +8,7 @@ const Faq = () => {
                 <h1 className='text-center text-info my-5 fs-1'>Frequently ask questions</h1>
                 <Row>
                     <Col className='my-auto' lg={6}>
-                        <Accordion>
+                        <Accordion className='h-100'>
                             <Accordion.Item className='bg-dark text-white' eventKey="0">
                                 <Accordion.Header >What is the coaching method?</Accordion.Header>
                                 <Accordion.Body>
