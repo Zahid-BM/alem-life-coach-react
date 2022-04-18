@@ -9,13 +9,9 @@ const SocialLogin = () => {
     const [signInWithGithub, user1, loading1, error1] = useSignInWithGithub(auth);
     const navigate = useNavigate();
 
-
-
     const handleGoogleSignIn = () => {
         signInWithGoogle();
     };
-
-
 
     if (user || user1) {
         navigate('/');

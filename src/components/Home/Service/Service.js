@@ -7,7 +7,7 @@ const Service = ({ service }) => {
     const { name, img, price, description } = service;
     return (
         <>
-            <Col className='g-4 hover' lg={4}>
+            <Col className='g-4 hover' lg={4}> {/* hover effect added */}
                 <Card className='h-100 shadow'>
                     <Card.Img className='img-thumbnail p-3' variant="top" src={img} />
                     <Card.Body className='p-4'>

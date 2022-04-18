@@ -22,7 +22,7 @@ const Register = () => {
     const [updateProfile, updating, profileError] = useUpdateProfile(auth);
 
     const handleCheckBox = event => {
-        const agree = event.target.checked;
+        const agree = event.target.checked; /* get checkbox value */
         setCondition(agree);
     };
 
@@ -70,6 +70,9 @@ const Register = () => {
                                 <Form.Check onChange={handleCheckBox} type="checkbox" label="Agree with Alem's terms and condition ?" />
                             </Form.Group>
                             <p className='text-danger'>{error?.message || profileError?.message}</p>
+
+                            {/* conditional rendering */}
+
                             {
                                 condition ? <Button className='d-block w-100' variant="info" type="submit">
                                     Register

@@ -9,11 +9,11 @@ const RequireAuth = ({ children }) => {
     const location = useLocation();
 
     if (loading) {
-        return <Loading></Loading>;
+        return <Loading></Loading>; /* this will prevent to redirect to login page after reload */
     };
 
     if (!user) {
-        return <Navigate to="/login" state={{ from: location }} replace />;
+        return <Navigate to="/login" state={{ from: location }} replace />; /* if n ot login then redirect to login page */
     }
     return children;
 };

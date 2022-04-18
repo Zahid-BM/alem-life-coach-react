@@ -33,6 +33,7 @@ const Header = () => {
                             </LinkContainer>
                         </Nav>
                         <Nav>
+                            {/* conditional rendering */}
                             {
                                 user ? <Button onClick={handleLogout} className='text-decoration-none' variant="secondary">Logout</Button> : <LinkContainer to='/login'>
                                     <NavLink><span className='text-secondary'>Login</span></NavLink>

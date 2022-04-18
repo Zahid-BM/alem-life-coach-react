@@ -37,6 +37,7 @@ const Login = () => {
         signInWithEmailAndPassword(email, password);
     };
     const handleResetPass = async () => {
+        /* using toast */
         const email = emailRef.current.value;
         if (!email) {
             return toast('Please input your email')
