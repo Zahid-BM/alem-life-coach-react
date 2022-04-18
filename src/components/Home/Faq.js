@@ -4,7 +4,7 @@ import { Accordion, Col, Container, Row } from 'react-bootstrap';
 const Faq = () => {
     return (
         <>
-            <Container className='my-5'>
+            <Container fluid className='my-5'>
                 <h1 className='text-center text-info my-5 fs-1'>Frequently ask questions</h1>
                 <Row>
                     <Col className='my-auto' lg={6}>

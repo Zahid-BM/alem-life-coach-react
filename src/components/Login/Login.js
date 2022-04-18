@@ -51,7 +51,7 @@ const Login = () => {
     return (
         <>
 
-            <Container className='my-5' >
+            <Container fluid className='my-5' >
                 <Row>
                     <Col lg={8}>
                         <img className='w-100 rounded-3 h-100' src="https://cdn.pixabay.com/photo/2020/08/09/14/25/lines-5475657_960_720.jpg" alt="" />

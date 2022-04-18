@@ -47,10 +47,10 @@ const Register = () => {
     }
     return (
         <>
-            <Container className='my-5'>
+            <Container fluid className='my-5'>
                 <Row>
                     <Col className='my-auto' lg={8}>
-                        <img className='w-100 rounded-3 h-100' src="https://cdn.pixabay.com/photo/2017/07/18/23/40/group-2517459_960_720.png" alt="" />
+                        <img style={{ height: '53rem' }} className='w-100 rounded-3' src="https://cdn.pixabay.com/photo/2017/07/18/23/40/group-2517459_960_720.png" alt="" />
                     </Col>
                     <Col className='my-auto shadow p-5' lg={4}>
                         <h2 className='text-center text-info'>Register</h2>
