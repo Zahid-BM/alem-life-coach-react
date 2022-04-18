@@ -4,13 +4,16 @@ import { Button, Container, Nav, Navbar, NavLink } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Link } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../firebase.init';
 
 const Header = () => {
     const [user] = useAuthState(auth);
     const handleLogout = () => {
         signOut(auth);
-    }
+        toast('You Logged out');
+    };
+
     return (
         <>
             <Navbar collapseOnSelect expand="lg" bg="info" variant="dark" sticky='top'>
@@ -39,7 +42,7 @@ const Header = () => {
 
                     </Navbar.Collapse>
                 </Container>
-
+                <ToastContainer></ToastContainer>
             </Navbar>
         </>
     );

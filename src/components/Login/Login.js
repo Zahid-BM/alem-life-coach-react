@@ -27,12 +27,14 @@ const Login = () => {
 
     if (user) {
         navigate(from, { replace: true });
+
     }
     const handleFormSubmit = event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        signInWithEmailAndPassword(email, password)
+        signInWithEmailAndPassword(email, password);
+        toast('You have logged in Successfully')
     };
     const handleResetPass = async () => {
         const email = emailRef.current.value;
