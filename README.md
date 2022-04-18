@@ -25,3 +25,5 @@ This website for Assignment-10 [Live Site Link is here](https://alem-life-coach.
 * A brief introduction about me in the aboutme route. 
 
 * Full website is responsive for mobile phone
+
+* With one email user can create multiple accounts

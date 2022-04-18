@@ -5,7 +5,6 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../firebase.init';
-import Loading from '../Shared/Loading/Loading';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 
 const Login = () => {
@@ -30,9 +29,7 @@ const Login = () => {
         navigate(from, { replace: true });
 
     };
-    if (loading || sending) {
-        <Loading></Loading>
-    };
+
     const handleFormSubmit = event => {
         event.preventDefault();
         const email = emailRef.current.value;

@@ -5,7 +5,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
-import Loading from '../Shared/Loading/Loading';
 
 const Register = () => {
     const userNameRef = useRef('');
@@ -34,18 +33,13 @@ const Register = () => {
         const password = passwordRef.current.value;
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName: userName });
-        
-    };
 
-
-    if (loading || updating) {
-        <Loading></Loading>
     };
 
     if (user) {
         navigate('/');
     };
-  
+
     return (
         <>
             <Container fluid className='my-5'>
@@ -60,7 +54,6 @@ const Register = () => {
                                 <Form.Label>Your Name</Form.Label>
                                 <Form.Control ref={userNameRef} type="text" name='name' placeholder="Enter your name" required />
                             </Form.Group>
-                            <br />
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label>Email address</Form.Label>
                                 <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />

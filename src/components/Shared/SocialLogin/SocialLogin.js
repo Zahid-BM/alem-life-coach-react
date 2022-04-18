@@ -3,7 +3,6 @@ import { Button } from 'react-bootstrap';
 import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
-import Loading from '../Loading/Loading';
 
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
@@ -22,9 +21,6 @@ const SocialLogin = () => {
         navigate('/');
     };
 
-    if (loading || loading1) {
-        <Loading></Loading>
-    };
     return (
         <>
             <div className='d-flex  align-items-center my-3'>
