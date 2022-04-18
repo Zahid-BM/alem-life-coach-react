@@ -1,6 +1,6 @@
 # ALEM Life Coach Website
 
-This website for Assignment-10 [Live Site Link is here](https://alem-life-coach.web.app/).
+This website is for Assignment-10 [Live Site Link is here](https://alem-life-coach.web.app/).
 
 ## Below are the key notes of the website
 
