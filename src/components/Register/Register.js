@@ -50,10 +50,10 @@ const Register = () => {
             <Container className='my-5'>
                 <Row>
                     <Col className='my-auto' lg={8}>
-                        <img className='w-100 rounded-3 h-50' src="https://cdn.pixabay.com/photo/2017/07/18/23/40/group-2517459_960_720.png" alt="" />
+                        <img className='w-100 rounded-3 h-100' src="https://cdn.pixabay.com/photo/2017/07/18/23/40/group-2517459_960_720.png" alt="" />
                     </Col>
                     <Col className='my-auto shadow p-5' lg={4}>
-                        <h2 className='text-center text-primary'>Register</h2>
+                        <h2 className='text-center text-info'>Register</h2>
                         <Form onSubmit={handleFormSubmit}>
                             <Form.Group className="mb-3" controlId="formBasicEmail1">
                                 <Form.Label>Your Name</Form.Label>
@@ -75,9 +75,9 @@ const Register = () => {
                             </Form.Group>
                             <p className='text-danger'>{error?.message || profileError?.message}</p>
                             {
-                                condition ? <Button className='d-block w-75 mx-auto' variant="primary" type="submit">
+                                condition ? <Button className='d-block w-100' variant="info" type="submit">
                                     Register
-                                </Button> : <Button className='d-block w-75 mx-auto' disabled variant="primary" type="submit">
+                                </Button> : <Button className='d-block w-100' disabled variant="info" type="submit">
                                     Register
                                 </Button>
                             }

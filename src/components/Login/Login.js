@@ -49,7 +49,7 @@ const Login = () => {
     }
 
     return (
-        <div className=' container mx-auto p-4  my-5 rounded'>
+        <>
 
             <Container className='my-5' >
                 <Row>
@@ -57,7 +57,7 @@ const Login = () => {
                         <img className='w-100 rounded-3 h-100' src="https://cdn.pixabay.com/photo/2020/08/09/14/25/lines-5475657_960_720.jpg" alt="" />
                     </Col>
                     <Col className='my-auto shadow p-5' lg={4}>
-                        <h2 className='text-center text-primary'>Login</h2>
+                        <h2 className='text-center text-info'>Login</h2>
                         <Form onSubmit={handleFormSubmit}>
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label>Email address</Form.Label>
@@ -73,7 +73,7 @@ const Login = () => {
                             </Form.Group>
                             <p className='text-danger my-2'>{error?.message}</p>
                             <p className='my-3'>Forget password ?<Button onClick={handleResetPass} className='text-decoration-none' variant="link">Reset password.</Button> </p>
-                            <Button variant="primary" type="submit">
+                            <Button className='w-100' variant="info" type="submit">
                                 Login
                             </Button>
                         </Form>
@@ -84,7 +84,7 @@ const Login = () => {
                 </Row>
 
             </Container>
-        </div>
+        </>
 
     );
 };

@@ -9,37 +9,37 @@ const Faq = () => {
                 <Row>
                     <Col className='my-auto' lg={6}>
                         <Accordion>
-                            <Accordion.Item eventKey="0">
-                                <Accordion.Header>What is the coaching method?</Accordion.Header>
+                            <Accordion.Item className='bg-dark text-white' eventKey="0">
+                                <Accordion.Header >What is the coaching method?</Accordion.Header>
                                 <Accordion.Body>
                                     Basically all these are pre-recorded video content. But depending on the requirement I also do specific video for specific people for some cases. Alongside, live call coaching is available 2 days in a week.
                                 </Accordion.Body>
                             </Accordion.Item>
-                            <Accordion.Item eventKey="1">
+                            <Accordion.Item className='bg-dark text-white' eventKey="1">
                                 <Accordion.Header>How long does you provide services after the courses ?</Accordion.Header>
                                 <Accordion.Body>
                                     I support and keep connection with my clients life long.
                                 </Accordion.Body>
                             </Accordion.Item>
-                            <Accordion.Item eventKey="2">
+                            <Accordion.Item className='bg-dark text-white' eventKey="2">
                                 <Accordion.Header>Do you provide any discounts or coupons ?</Accordion.Header>
                                 <Accordion.Body>
                                     Yes all the year it is running to provide discounts and coupon codes. Alongside, special discount for struggling people.
                                 </Accordion.Body>
                             </Accordion.Item>
-                            <Accordion.Item eventKey="3">
+                            <Accordion.Item className='bg-dark text-white' eventKey="3">
                                 <Accordion.Header>Who run the course services alongside you?</Accordion.Header>
                                 <Accordion.Body>
                                     All the course contents and coaching materials created and served by me only.
                                 </Accordion.Body>
                             </Accordion.Item>
-                            <Accordion.Item eventKey="4">
+                            <Accordion.Item className='bg-dark text-white' eventKey="4">
                                 <Accordion.Header>Can I get my money back if no improvement ?</Accordion.Header>
                                 <Accordion.Body>
                                     Yes, sure. I offer 100% money back guarantee by 2 months if there is no improvements.
                                 </Accordion.Body>
                             </Accordion.Item>
-                            <Accordion.Item eventKey="5">
+                            <Accordion.Item className='bg-dark text-white' eventKey="5">
                                 <Accordion.Header>I have more questions. How to get answers? </Accordion.Header>
                                 <Accordion.Body>
                                     You can can keep eyes on the FAQ section and if not satisfied then you can call and discuss me directly on Thursday 9pm over cellphone.

@@ -11,7 +11,7 @@ const Header = () => {
     const [user] = useAuthState(auth);
     const handleLogout = () => {
         signOut(auth);
-        toast('You Logged out');
+        toast('You Logged out. Please login to buy courses and visit protected page.');
     };
 
     return (
@@ -34,8 +34,8 @@ const Header = () => {
                         </Nav>
                         <Nav>
                             {
-                                user ? <Button onClick={handleLogout} className='text-decoration-none' variant="white">Logout</Button> : <LinkContainer to='/login'>
-                                    <NavLink>Login</NavLink>
+                                user ? <Button onClick={handleLogout} className='text-decoration-none' variant="secondary">Logout</Button> : <LinkContainer to='/login'>
+                                    <NavLink><span className='text-secondary'>Login</span></NavLink>
                                 </LinkContainer>
                             }
                         </Nav>
