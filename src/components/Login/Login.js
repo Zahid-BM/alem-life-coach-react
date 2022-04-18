@@ -3,12 +3,9 @@ import React, { useRef } from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-
 import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../firebase.init';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
-
-
 
 const Login = () => {
     const emailRef = useRef('');
@@ -19,9 +16,9 @@ const Login = () => {
         user,
         loading,
         error,
-    ] = useSignInWithEmailAndPassword();
+    ] = useSignInWithEmailAndPassword(auth);
 
-    const [sendPasswordResetEmail, sending, resetPassError] = useSendPasswordResetEmail(auth); /* clean code */
+    const [sendPasswordResetEmail, sending, resetPassError] = useSendPasswordResetEmail(auth);
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -35,9 +32,7 @@ const Login = () => {
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         signInWithEmailAndPassword(email, password)
-        if (user) {
-            toast('login success');
-        }
+        toast('login success');
         console.log(email, password);
     };
     const handleResetPass = async () => {
@@ -50,10 +45,12 @@ const Login = () => {
             toast('Sent email for password reset');
         }
 
-    };
+    }
+
     return (
-        <>
-            <Container className='my-5'>
+        <div className=' container mx-auto p-4  my-5 rounded'>
+
+            <Container className='my-5' >
                 <Row>
                     <Col lg={8}>
                         <img className='w-100 rounded-3 h-100' src="https://cdn.pixabay.com/photo/2020/08/09/14/25/lines-5475657_960_720.jpg" alt="" />
@@ -75,18 +72,19 @@ const Login = () => {
                             </Form.Group>
                             <p className='text-danger my-2'>{error?.message}</p>
                             <p className='my-3'>Forget password ?<Button onClick={handleResetPass} className='text-decoration-none' variant="link">Reset password.</Button> </p>
-                            <Button className='d-block w-75 mx-auto' variant="primary" type="submit">
+                            <Button variant="primary" type="submit">
                                 Login
                             </Button>
                         </Form>
-                        <p className='my-4'>New to Alem Life Coach ? <Link to='/register' className='text-warning text-decoration-none'>Register</Link></p>
+                        <p className='my-4'>New to Car Genius ? <Link to='/signup' className='text-warning text-decoration-none'>Signup</Link></p>
                         <SocialLogin></SocialLogin>
                         <ToastContainer></ToastContainer>
                     </Col>
                 </Row>
 
             </Container>
-        </>
+        </div>
+
     );
 };
 
