@@ -1,12 +1,11 @@
+import { async } from '@firebase/util';
 import React, { useRef, useState } from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
-
-import { async } from '@firebase/util';
-import { ToastContainer, toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
+import Loading from '../Shared/Loading/Loading';
 
 const Register = () => {
     const userNameRef = useRef('');
@@ -26,8 +25,6 @@ const Register = () => {
     const handleCheckBox = event => {
         const agree = event.target.checked;
         setCondition(agree);
-
-        console.log(condition);
     };
 
     const handleFormSubmit = async event => {
@@ -37,14 +34,18 @@ const Register = () => {
         const password = passwordRef.current.value;
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName: userName });
-        console.log(updateProfile());
+        
+    };
+
+
+    if (loading || updating) {
+        <Loading></Loading>
     };
 
     if (user) {
-        toast('Account creation done !!!!');
-        console.log(user);
         navigate('/');
-    }
+    };
+  
     return (
         <>
             <Container fluid className='my-5'>
@@ -58,7 +59,9 @@ const Register = () => {
                             <Form.Group className="mb-3" controlId="formBasicEmail1">
                                 <Form.Label>Your Name</Form.Label>
                                 <Form.Control ref={userNameRef} type="text" name='name' placeholder="Enter your name" required />
-                                <br />
+                            </Form.Group>
+                            <br />
+                            <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label>Email address</Form.Label>
                                 <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
                                 <Form.Text className="text-muted">
@@ -84,7 +87,6 @@ const Register = () => {
                         </Form>
                         <p className='my-4'>Already have an account ? <Link to='/login' className='text-warning text-decoration-none'>Login</Link></p>
                         <SocialLogin></SocialLogin>
-                        <ToastContainer />
                     </Col>
                 </Row>
             </Container>

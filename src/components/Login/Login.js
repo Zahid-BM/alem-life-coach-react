@@ -5,6 +5,7 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../firebase.init';
+import Loading from '../Shared/Loading/Loading';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 
 const Login = () => {
@@ -28,13 +29,15 @@ const Login = () => {
     if (user) {
         navigate(from, { replace: true });
 
-    }
+    };
+    if (loading || sending) {
+        <Loading></Loading>
+    };
     const handleFormSubmit = event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         signInWithEmailAndPassword(email, password);
-        toast('You have logged in Successfully')
     };
     const handleResetPass = async () => {
         const email = emailRef.current.value;
@@ -43,10 +46,10 @@ const Login = () => {
         }
         else {
             await sendPasswordResetEmail(email);
-            toast('Sent email for password reset');
+            toast('Sent email for password reset. Check email and reset password');
         }
 
-    }
+    };
 
     return (
         <>
