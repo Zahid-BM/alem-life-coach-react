@@ -5,6 +5,7 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../firebase.init';
+import PageTitle from '../Shared/PageTitle/PageTitle';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 
 const Login = () => {
@@ -51,7 +52,7 @@ const Login = () => {
 
     return (
         <>
-
+            <PageTitle title={'Login'} pageColor={'login-bg'}></PageTitle>
             <Container fluid className='my-5' >
                 <Row>
                     <Col lg={8}>

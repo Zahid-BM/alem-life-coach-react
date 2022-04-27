@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
+import PageTitle from '../Shared/PageTitle/PageTitle';
 
 const Register = () => {
     const userNameRef = useRef('');
@@ -12,6 +13,8 @@ const Register = () => {
     const passwordRef = useRef('');
     const [condition, setCondition] = useState(false);
     const navigate = useNavigate();
+
+
 
     const [
         createUserWithEmailAndPassword,
@@ -21,9 +24,15 @@ const Register = () => {
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const [updateProfile, updating, profileError] = useUpdateProfile(auth);
 
+
+
     const handleCheckBox = event => {
         const agree = event.target.checked; /* get checkbox value */
         setCondition(agree);
+    };
+
+    if (user) {
+        navigate('/');
     };
 
     const handleFormSubmit = async event => {
@@ -36,12 +45,12 @@ const Register = () => {
 
     };
 
-    if (user) {
-        navigate('/');
-    };
+
+
 
     return (
         <>
+            <PageTitle title={'Register'} pageColor={'register-bg'}></PageTitle>
             <Container fluid className='my-5'>
                 <Row>
                     <Col className='my-auto' lg={8}>

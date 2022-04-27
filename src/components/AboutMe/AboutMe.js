@@ -1,10 +1,12 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import image from '../../images/Passport size below 200kb.jpeg'
+import PageTitle from '../Shared/PageTitle/PageTitle';
 
 const AboutMe = () => {
     return (
         <>
+            <PageTitle title={'About-me'} pageColor={'about-bg'}></PageTitle>
             <Container className='my-5'>
                 <Row>
                     <Col className='my-auto' lg={6}>

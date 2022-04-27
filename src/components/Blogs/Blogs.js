@@ -1,9 +1,11 @@
 import React from 'react';
 import { Accordion, Col, Container, Row } from 'react-bootstrap';
+import PageTitle from '../Shared/PageTitle/PageTitle';
 
 const Blogs = () => {
     return (
         <>
+            <PageTitle title={'Blogs'} pageColor={'blogs-bg'}></PageTitle>
             <Container >
                 <h1 className='text-center text-info mt-5 mb-3'>Mandatory to Know the answers</h1>
                 <Row>

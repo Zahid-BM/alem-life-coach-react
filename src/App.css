@@ -1,12 +1,27 @@
 .App {
   text-align: center;
 }
+.about-bg{
+background-image: linear-gradient(#789395, #00B4D8)
+}
+.home-bg {
+  background-image: linear-gradient(#54BAB9, #5584AC)
+}
 
+.blogs-bg{
+    background-image: linear-gradient(#1b98a6, #43919B)
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
+.login-bg{
+  background-image: linear-gradient(#A1B57D, #43919B)
+}
+.register-bg{
+  background-image: linear-gradient(#54BAB9, #2EB086)
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
