@@ -8,7 +8,7 @@ const Footer = () => {
             <footer className='text-center text-white py-5'>
                 All right reserved &copy; ALEM Life Coach {year}
                 <br />
-                Email address : bmzahidulislam@outlook.com
+            Email address : bmzahidulislam@outlook.com
                 <br />
                 Contact number : +880 1675633294
                 <h4><span className='text-warning'>Alem Life Coach</span> the life changer</h4>
