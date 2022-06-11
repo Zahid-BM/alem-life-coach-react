@@ -1,8 +1,7 @@
 # ALEM Life Coach Website
 
-## an warning is there. When register then shows the message  react-dom.development.js:86 Warning: Cannot update a component (`BrowserRouter`) while rendering a different component (`Register`)
 
-This website is for Assignment-10 [Live Site Link is here](https://alem-life-coach.web.app/).
+A Full functional mobile responsive Life Coach Website with Reactjs.[Live Site Link is here](https://alem-life-coach.web.app/).
 
 ## Below are the key notes of the website
 
@@ -40,5 +39,6 @@ This website is for Assignment-10 [Live Site Link is here](https://alem-life-coa
 * npm react bootstrap,
 * and firebase for hosting & authentication.
 * npm react helmet async
+* Fake data
 
 
